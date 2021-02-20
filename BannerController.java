@@ -43,7 +43,7 @@ public class BannerController {
                 banner.setDeleted(true);
                 return bannerRepository.save(banner);
             });
-            return ResponseEntity.status(HttpStatus.OK).body("id " + id + " was deleted");
+            return ResponseEntity.status(HttpStatus.OK).body("banner was deleted");
         } else
             return ResponseEntity.badRequest().body("Banner id invalid");
     }
